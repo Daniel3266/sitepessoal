@@ -1,0 +1,181 @@
+
+/* resetar padrões da página */
+*, *::before, *::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* facilitando minha vida com call de cores (talvez apagar)*/ 
+:root {
+	--fonte: 'Inter', Trebuchet MS, sans-serif;
+	/* colocando transição */
+	--transicao: all 0.3s ease;
+}
+
+body {
+	font-family: var(--fonte);
+	background-color: #F5FFFA;
+}
+
+.container{
+	/* talvez dê problema */
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 0 2rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-bottom: 2rem;
+}
+
+/* "a caixinha de cima" */
+header {
+	background-color: #E0FFFF;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 1000;
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 0;
+}
+
+.logo {
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: #2F4F4F;
+}
+
+.nav-links {
+	display: flex;
+	list-style: none;
+}
+
+.nav-links li {
+	margin-left: 2rem;
+}
+
+.nav-links a {
+	color: black;
+	text-decoration: none;
+	transition: var(--transicao);
+}
+
+.nav-links a:hover {
+	color: brown;
+}
+
+main {
+	margin-top: 5rem;
+}
+
+/* importante */
+section {
+	padding: 6rem 0;
+}
+
+/* grade (talves dê problema de espaçamento) */
+.dev {
+	display: flex;
+	flex-direction: column-reverse;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+	align-items: center;
+}
+
+/* texto principal */
+.dev-texto h1 {
+	font-size: 2.5rem;
+	margin-bottom: 1rem;
+}
+
+/* texto secundario */
+.dev-texto p {
+	font-size: 1.23rem;
+	margin-bottom: 2rem;
+}
+
+.botao-de-contato {
+	background-color: #E0FFFF;
+	text-decoration: none;
+	color: black;
+	padding: 0.10rem 2rem;
+	border-radius: 10px;
+	transition: var(--transicao);
+	font-size: 1.rem;
+}
+
+.botao-de-contato:hover{
+	background-color: white;
+}
+
+/* config de imagem */
+.dev-imagem {
+	position: relative;
+}
+
+.imagem-perfil {
+
+	border-radius: 50%;
+	width: 300%;
+	/* redimensionar automaticamente */
+	height: auto;
+	max-width: 250px;
+	object-fit: cover;
+}
+
+.formacao-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	gap: 2rem;
+}
+
+.formacao-item {
+	background-color: white;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	padding: 1.5rem;
+	text-align: center;
+	border-radius: 10px;
+	transition: var(--transicao);
+}
+
+.formacao-item:hover {
+	transform: translateY(-5px);
+}
+
+.formacao-icon {
+	font-size: 2.5rem;
+	margin-bottom: 1rem;
+}
+
+.formacao-icon2 {
+display: inline-block;
+}
+
+/* espaço entre os elementos */
+#sobremim {
+	margin-bottom: 75px;
+}
+
+#formacao {
+	margin-bottom: 50px;
+}
+
+#experiencia {
+	margin-bottom: 100px;
+}
+
+#contato {
+	margin-bottom: 100px;
+}
+
+.iconezinho {
+	max-width: 50px;
+}
